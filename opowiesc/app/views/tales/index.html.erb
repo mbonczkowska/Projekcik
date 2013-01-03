@@ -9,7 +9,7 @@
       <th><%= model_class.human_attribute_name(:id) %></th>
       <th><%= model_class.human_attribute_name(:title) %></th>
       <th><%= model_class.human_attribute_name(:link) %></th>
-      <th><%= model_class.human_attribute_name(:stars) %></th>
+      <th><%= model_class.human_attribute_name(:ratings) %></th>
       <th><%= model_class.human_attribute_name(:created_at) %></th>
       <th><%=t '.actions', :default => t("helpers.actions") %></th>
     </tr>
@@ -21,14 +21,16 @@
         <td><%= tale.title %></td>
         <td><%= tale.link %></td>
         <td>
+         
            <ul class="rating">
             <% form_id = "tale_#{tale.id}_rating" %>
-          
-             
-              <% (1..5).each do |i| %>
-                <li class="rating_star" data-stars="<%= i %>" data-tale-id="<%= tale.id %>" id=<%= "#{tale.id}_#{i}" %>"></li>
-             <% end %>
-           </ul>
+
+
+           
+                    <% (1..5).each do |i| %>
+                              <%= i %>
+                 <% end %>
+       
         </td>
         <td><%=l tale.created_at %></td>
         <td>
