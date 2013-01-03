@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <title>Opowiesc</title>
+<%= stylesheet_link_tag    "application", :media => "all" %>
+ </head> <body>
+   <a class="brand" href="/users/sign_up">Rejestracja</a>
+<% unless user_signed_in? %>
+  <li><%= link_to "Sign in","/users/sign_in" %></li>
+<% else %>
+  <li>
+  <%= current_user.email %></li> <%= link_to 'Sign Out', "/logout" %>
+
+<% end %>
+ 
+  <div id="login_logout">
+     <% if @current_user %> 
+          Logged in as:
+       <%= @current_user.login %>       <% else %>
+        <em>Not logged in.</em>
+        <%= link_to 'Login', "/account/login" %>
+       <% end %>
+</div>
+ <%= yield %>
+
+</body>
+</html>
