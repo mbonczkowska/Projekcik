@@ -1,4 +1,6 @@
 Radio::Application.routes.draw do 
+  devise_for :users
+
   get "sessions/new"
 
   get "sessions/create"
@@ -7,7 +9,7 @@ Radio::Application.routes.draw do
 
   get '/logout', :to => 'sessions#destroy'
 
-  devise_for :users
+  devise_for :users, :controllers => { :sessions => :sessions }
 
    resources :songs do
   member do
