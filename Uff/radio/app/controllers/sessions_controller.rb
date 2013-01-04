@@ -12,12 +12,22 @@ class SessionsController < ApplicationController
       render 'new'
     end
   end
+  def create
+    man = Man.from_omniauth(env["omniauth.auth"])
+    session[:man_id] = man.id
+    redirect_to root_url
+  end
+
   def destroy
-    if current_user
+   if current_user
       flash[:notice] = 'You were logged out.'
       sign_out_and_redirect current_user
     else
       redirect_to root_path
     end
+     if current_man
+       session[:man_id] = nil
+     end
   end
 end
+

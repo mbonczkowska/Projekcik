@@ -19,7 +19,7 @@ Radio::Application.routes.draw do
   get   '/login', :to => 'sessions#new', :as => :login
   match '/auth/:provider/callback', :to => 'sessions#create'
   match '/auth/failure', :to => 'sessions#failure'
-
+  match '/signout', to: 'sessions#destroy', as: 'signout'
 get 'tags/:tag', to: 'songs#index', as: :tag
 root :to => 'songs#index'
 end
