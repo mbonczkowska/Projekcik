@@ -15,7 +15,7 @@ Opowiesc::Application.routes.draw do
   get "account/login"
 
   get "account/logout"
-
+get 'tags/:tag', to: 'tales#index', as: :tag
  resources :tales 
 root :to => 'tales#index'
 

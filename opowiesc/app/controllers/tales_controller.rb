@@ -3,7 +3,12 @@ class TalesController < ApplicationController
   # GET /tales.json
   
   def index
+    if params[:tag]
+    @tales = Tale.tagged_with(params[:tag])
+  else
     @tales = Tale.all
+  end
+  
     unless @current_user.nil?
     session[:user_id] = @current_user.id
    

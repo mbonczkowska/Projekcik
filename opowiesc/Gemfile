@@ -29,7 +29,7 @@ group :development, :test do
 end
 gem 'less-rails', '~> 2.2.6'
 gem 'therubyracer', '~> 0.10.2'
-
+gem 'acts-as-taggable-on'
 # alternatywa dla serwera Webrick
 gem 'thin'
 
