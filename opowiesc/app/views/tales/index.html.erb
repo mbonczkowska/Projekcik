@@ -31,6 +31,7 @@
         <td><%= tale.rate %></td>
         <td><%=l tale.created_at %></td>
         <td>
+   
           <%= link_to t('.edit', :default => t("helpers.links.edit")),
                       edit_tale_path(tale), :class => 'btn btn-mini' %>
           <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
@@ -38,9 +39,11 @@
                       :method => :delete,
                       :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
                       :class => 'btn btn-mini btn-danger' %>
-     </td>   
-     
+      
+           <br> <%= link_to "Comment", 'tales/1/comments' %> </br>
 
+       
+         </td>  
       </tr>
        
     <% end %>

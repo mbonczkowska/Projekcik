@@ -3,6 +3,7 @@ class TalesController < ApplicationController
   # GET /tales.json
   
   def index
+       param1 = params[:id] 
     if params[:tag]
     @tales = Tale.tagged_with(params[:tag])
   else

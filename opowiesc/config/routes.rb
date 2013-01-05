@@ -1,5 +1,8 @@
-Opowiesc::Application.routes.draw do
+Opowiesc::Application.routes.draw do 
  
+ resources :tales do
+  resources :comments
+end 
   get "user/index"
 
   get "user/create"
