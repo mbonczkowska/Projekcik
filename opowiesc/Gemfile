@@ -33,3 +33,4 @@ gem 'therubyracer', '~> 0.10.2'
 # alternatywa dla serwera Webrick
 gem 'thin'
 
+

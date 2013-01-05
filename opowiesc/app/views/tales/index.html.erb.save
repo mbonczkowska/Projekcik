@@ -20,7 +20,18 @@
         <td><%= link_to tale.id, tale_path(tale) %></td>
         <td><%= tale.title %></td>
         <td><%= link_to tale.link, tale.link %></td>
-        <td><%= tale.rate %></td>
+        <td>
+         
+           <ul class="rating">
+            <% form_id = "tale_#{tale.id}_rating" %>
+
+
+           
+                    <% (1..5).each do |i| %>
+                              <%= i %>
+                 <% end %>
+       
+        </td>
         <td><%=l tale.created_at %></td>
         <td>
           <%= link_to t('.edit', :default => t("helpers.links.edit")),

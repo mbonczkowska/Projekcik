@@ -3,7 +3,7 @@ class CreateTales < ActiveRecord::Migration
     create_table :tales do |t|
       t.string :title
       t.string :link
-
+      t.integer :rating  
       t.timestamps
     end
   end
