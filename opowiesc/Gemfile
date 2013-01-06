@@ -30,6 +30,8 @@ end
 gem 'less-rails', '~> 2.2.6'
 gem 'therubyracer', '~> 0.10.2'
 gem 'acts-as-taggable-on'
+gem 'carrierwave', '~> 0.7.0'
+gem 'paperclip', :git => "git://github.com/thoughtbot/paperclip.git"
 # alternatywa dla serwera Webrick
 gem 'thin'
 

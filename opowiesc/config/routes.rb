@@ -1,5 +1,8 @@
 Opowiesc::Application.routes.draw do 
  
+  resources :galleries
+
+
  resources :tales do
   resources :comments
 end 
