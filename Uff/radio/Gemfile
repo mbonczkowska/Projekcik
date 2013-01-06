@@ -14,7 +14,6 @@ gem 'acts-as-taggable-on', '~> 2.3.3'
 #   http://rubydoc.info/github/jnicklas/capybara#Using_Capybara_with_RSpec
 gem 'capybara', '~> 1.1.2', :groups => :test
 
-gem 'sqlite3', :groups => [:test, :development]
 gem 'pg', :groups => :production 
 
 
